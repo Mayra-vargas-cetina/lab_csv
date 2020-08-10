@@ -28,9 +28,13 @@ void parseCSV()
         parsedCsv.push_back(parsedRow);
 
 	}
-	for (char archivo:parsedCsv){	
-		cout<<archivo;
-	}
+	
+    for (int i=0; i<parsedCsv.size(); i++){ 
+        for (int j=0; j<parsedCsv[i].size(); j++){
+            cout << parsedCsv[i][j] << "   ";
+        }
+        cout << '\n';
+    }
 }
 
 
