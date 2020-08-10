@@ -22,16 +22,18 @@ void parseCSV()
         std::vector<std::string> parsedRow;
         while(std::getline(lineStream,cell,','))
         {
-            parsedRow.push_back(cell);
+            parsedRow.push_back(cell); // por medio de push back se agregan los valores dentro del vector, el push back va a agregando un valor al final del vector//
+
         }
 
         parsedCsv.push_back(parsedRow);
 
 	}
-	
-    for (int i=0; i<parsedCsv.size(); i++){ 
-        for (int j=0; j<parsedCsv[i].size(); j++){
-            cout << parsedCsv[i][j] << "   ";
+	 // inicialmente lo hice de forma manual esto era introducir las variables una por una quiere decir sin extraer del archivo.exe//
+     // luego lo pense de forma dinamica, esto se puede hacer recorriendo  los vectores directamente desde el archivo.exe//
+    for (int i=0; i<parsedCsv.size(); i++){   // En este primer for lo que hacemos es recorrer el tamaño del primer vector, este primer vector son  las columnas//
+        for (int j=0; j<parsedCsv[i].size(); j++){// En el segundo for lo que hacemos es recorrre el tamaño del segundo vector, este segundo vector  son las filas//
+            cout << parsedCsv[i][j] << "   "; // finalmente hago la iteracion entre j Y i, aqui se imprimen tanto filas como columnas//
         }
         cout << '\n';
     }
